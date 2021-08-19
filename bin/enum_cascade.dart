@@ -1,10 +1,14 @@
-import 'package:enum_cascade/enum_cascade.dart' as enum_cascade;
-
 // Enum & Cascade
 
 void main(List<String> arguments) {
   var m = MonsterUcoa(status: UcoaStatus.poisoned);
-  m.move();
+  print('Hello World');
+
+  // cascade notations
+
+  m
+    ..move()
+    ..eat();
 }
 
 enum UcoaStatus { normal, poisoned, confused }
